@@ -1,4 +1,5 @@
 = hidden_field_tag :author_name, @quote.author.blank? ? @quote.missing_author_wallpaper : @quote.author
+= hidden_field_tag :quote_id, @quote.id
 
 .background_cover
 .row

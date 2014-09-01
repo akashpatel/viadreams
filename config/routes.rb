@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :quotes, only: [:index, :show] do
     get 'random', on: :collection
+    post 'update_likes', on: :collection
   end
 
   end

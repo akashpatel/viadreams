@@ -35,6 +35,10 @@ var cycleRandomQuote = function() {
     $("#quote_desc").text(data.description)
     $("#quote_author").text(data.author)
     $("#quote_likes").text(data.likes)
+
+    //Update hidden fields
+    $("#author_name").val(data.author);
+    $("#quote_id").val(data.id);
   });
 }
 
@@ -42,5 +46,20 @@ $(function() {
   var author = $('#author_name').val()
   refreshBackgroundImage(author)
 
-  setInterval(cycleRandomQuote, 10000);
+  setInterval(cycleRandomQuote, 15000);
+
+  $(".favIcon").click(function(e) {
+    e.preventDefault();
+    var quote_id = $("#quote_id").val();
+    $.ajax({
+      type: 'POST',
+      url: '/quotes/update_likes',
+      data: {id: quote_id}
+    })
+    .done(function ( data, status ) {
+      if(status == "success") {
+        $("#quote_likes").hide().fadeIn("slow").text(data.likes);
+      }
+    })
+  })
 });

@@ -20,4 +20,17 @@ class QuotesController < ApplicationController
     end
   end
 
+  def update_likes
+    @quote = Quote.find(params[:id])
+    @quote.likes = 0 if @quote.likes.blank?
+    @quote.likes = @quote.likes+1
+
+    if @quote.save!
+      render json: @quote, status: :ok
+    else
+      render json: @quote, status: :unprocessable_entity
+    end
+
+  end
+
 end
