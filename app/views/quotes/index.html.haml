@@ -17,11 +17,11 @@
       / Bottom: Author Name
       .row#quote_container_bottom
         .col-md-12.col-xs-12
-          %p= @quote.author
+          %p= "~ #{@quote.author}" unless @quote.author.blank?
 
       / Bottom2: Likes
       .row#quote_container_last_bottom
         .col-md-12.col.xs-12
           %a.favIcon{href: "#"}
-          %p.favIconNumber= "5"
+          %p.favIconNumber= @quote.likes.nil? ? 0 : @quote.likes
           = image_tag "viadreams_stamp_logo.png", class: "logo"
