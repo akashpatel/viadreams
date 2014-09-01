@@ -15,9 +15,8 @@ var refreshBackgroundImage = function(author) {
         $('.background_cover').css('background', 'url(' + img_src + ') no-repeat center center');
         $('.background_cover').hide();
         $('.background_cover').fadeIn("slow");
-        $('body').fadeIn("slow");
-
       }
+      $('body').fadeIn("slow");
   });
 };
 
@@ -31,7 +30,7 @@ var cycleRandomQuote = function() {
     refreshBackgroundImage(data.author);
 
     // Update quote text with the new quote.
-    $("#quote_title").text("quote #" + data.id)
+    $("#quote_title").text("inspiration #" + data.id)
     $("#quote_desc").text(data.description)
     $("#quote_author").text(data.author)
     $("#quote_likes").text(data.likes)
