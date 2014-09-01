@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'quotes#index'
 
-  resources :quotes, only: [:index]
+  resources :quotes, only: [:index, :show]
 
   end
