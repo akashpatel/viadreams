@@ -27,7 +27,7 @@ var cycleRandomQuote = function() {
   .done(function( data ) {
     $('.background_cover').hide("slow").fadeOut("slow")
     refreshBackgroundImage(data.author);
-    $(".transparent_box").hide("slow").fadeOut("slow")
+    $(".transparent_box").fadeOut("slow")
 
 
     // Update quote text with the new quote.
