@@ -1,0 +1,27 @@
+= hidden_field_tag :author_name, @quote.author.blank? ? @quote.missing_author_wallpaper : @quote.author
+
+.background_cover
+.row
+  .col-md-10.col-xs-12
+    .transparent_box
+      / Header: title
+      .row#quote_container_top
+        .col-md-12.col-xs-12
+          %h1= "quote ##{@quote.id}"
+
+      / Body: actual quote
+      .row#quote_container_middle
+        .col-md-12.col-xs-12
+          %blockquote= @quote.description
+
+      / Bottom: Author Name
+      .row#quote_container_bottom
+        .col-md-12.col-xs-12
+          %p= @quote.author
+
+      / Bottom2: Likes
+      .row#quote_container_last_bottom
+        .col-md-12.col.xs-12
+          %a.favIcon{href: "#"}
+          %p.favIconNumber= "5"
+          = image_tag "viadreams_stamp_logo.png", class: "logo"

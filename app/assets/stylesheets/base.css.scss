@@ -1,0 +1,39 @@
+body{
+  margin:0; padding:0;
+	font-family: "MuseoSlab",georgia,"dejavu serif",serif;
+	color:#979797;
+  font-size: 45px;
+  background-color: #E5E5E5;
+  margin-left: -10px;
+}
+
+.background_cover {
+  background: url("") no-repeat center center;
+  -webkit-background-size: cover;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(7px);
+  -o-filter: blur(7px);
+  -ms-filter: blur(7px);
+  filter: blur(7px);
+  position:absolute;
+  width:99%;
+  height:100%;
+}
+
+.transparent_box {
+  width: inherit;
+	height: inherit;
+	background-color: rgba(0, 0, 0, 0.53);
+	margin-left: auto;
+	margin-right: auto;
+  margin-top: 30px;
+	color: #E5E5E5;
+}
+
+.logo {
+  width: 100px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  opacity: 0.4;
+}

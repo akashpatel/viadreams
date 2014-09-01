@@ -1,0 +1,52 @@
+#quote_container_top {
+  text-align: center;
+  color: rgb(168, 213, 91);
+  font-size: 100%;
+}
+
+#quote_container_middle {
+  text-align: left;
+  blockquote {
+    font-size: 65%;
+    // text-shadow: 0 3px 0 black, 0 0 5.5vw rgba(54, 54, 54, 0.32);
+    border-left: none;
+    margin-bottom: 0px;
+  }
+}
+
+#quote_container_bottom {
+  text-align: left;
+  // margin-right: 50px;
+  margin-left: 15px;
+  margin-top: 0px;
+  font-size: 30px;
+  color: #898989;
+}
+
+#quote_container_last_bottom {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.favIcon {
+  background-image: url("icons/heart2.png");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  color: transparent;
+  padding: 20px 30px;
+}
+
+.favIcon:hover {
+  opacity: 0.7;
+}
+
+.favIconNumber {
+  position: absolute;
+  top: 0;
+  left: 49.6%;
+  font-size: 15px;
+  color: rgb(168, 213, 91);
+}
