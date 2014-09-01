@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140831090612) do
+ActiveRecord::Schema.define(version: 20140901113211) do
 
   create_table "quotes", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.string   "author"
-    t.integer  "likes"
+    t.integer  "likes",       default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

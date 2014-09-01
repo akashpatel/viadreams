@@ -7,21 +7,21 @@
       / Header: title
       .row#quote_container_top
         .col-md-12.col-xs-12
-          %h1= "quote ##{@quote.id}"
+          %h1#quote_title= "quote ##{@quote.id}"
 
       / Body: actual quote
       .row#quote_container_middle
         .col-md-12.col-xs-12
-          %blockquote= @quote.description
+          %blockquote#quote_desc= @quote.description
 
       / Bottom: Author Name
       .row#quote_container_bottom
         .col-md-12.col-xs-12
-          %p= "~ #{@quote.author}" unless @quote.author.blank?
+          %p#quote_author= "~ #{@quote.author}" unless @quote.author.blank?
 
       / Bottom2: Likes
       .row#quote_container_last_bottom
         .col-md-12.col.xs-12
           %a.favIcon{href: "#"}
-          %p.favIconNumber= @quote.likes.nil? ? 0 : @quote.likes
+          %p.favIconNumber#quote_likes= @quote.likes.nil? ? 0 : @quote.likes
           = image_tag "viadreams_stamp_logo.png", class: "logo"

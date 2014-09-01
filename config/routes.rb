@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'quotes#index'
 
-  resources :quotes, only: [:index, :show]
+  resources :quotes, only: [:index, :show] do
+    get 'random', on: :collection
+  end
 
   end
