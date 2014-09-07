@@ -61,4 +61,10 @@ $(function() {
       }
     })
   })
+
+  // Shortcut to create new quote
+  $(document).bind('keydown', 'n', function(){
+    $('#newQuoteModal').modal('show');
+  });
+
 });

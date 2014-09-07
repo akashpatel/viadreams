@@ -1,0 +1,16 @@
+#newQuoteModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "newQuoteModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} &times;
+          %span.sr-only Close
+        %h4#newQuoteModalLabel.modal-title New Quote
+      .modal-body
+        = form_for(:quote, url: quotes_path, remote: true) do |f|
+          .form-group
+            = f.text_area :description, placeholder: "Quote", value: '', class: "form-control", required: "required"
+          .form-group
+            = f.text_field :author, placeholder: "Author", value: '', class: "form-control"
+          .modal-footer
+            = f.submit "Save", class: "btn btn-primary"

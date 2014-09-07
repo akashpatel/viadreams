@@ -30,7 +30,20 @@ class QuotesController < ApplicationController
     else
       render json: @quote, status: :unprocessable_entity
     end
-
   end
+
+  def create
+    @quote = Quote.new(quote_params)
+
+    if @quote.save!
+      redirect_to quote_path(@quote)
+    end
+  end
+
+  private
+
+    def quote_params
+      params.require(:quote).permit(:description, :author, :likes)
+    end
 
 end

@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Quote.create(description: "The secret of leadership is simple: Do what you believe in. Paint a picture of the future. Go there.
+People will follow.", author: "Seth Godin", likes: 20)

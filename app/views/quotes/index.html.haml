@@ -26,3 +26,5 @@
           %a.favIcon{href: "#"}
           %p.favIconNumber#quote_likes= @quote.likes.nil? ? 0 : @quote.likes
           = image_tag "viadreams_stamp_logo.png", class: "logo"
+
+= render "quotes/partials/new_quote_modal"
